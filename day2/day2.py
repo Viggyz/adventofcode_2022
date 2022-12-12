@@ -1,4 +1,4 @@
-import sys, re
+import sys
 sys.stdin = open('day2.in', 'r')
 
 score = (1,2,3)

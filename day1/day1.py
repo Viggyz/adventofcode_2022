@@ -1,6 +1,6 @@
-import sys, re
+import sys
 sys.stdin = open('day1.in', 'r')
-# sys.stdout = open('day2.out', 'w')
+
 import heapq
 from functools import reduce
 

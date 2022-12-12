@@ -1,4 +1,4 @@
-import sys, re
+import sys
 sys.stdin = open('day2.in', 'r')
 
 select_mapping = {
