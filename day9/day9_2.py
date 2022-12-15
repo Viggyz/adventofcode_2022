@@ -1,8 +1,7 @@
 import sys
 sys.stdin = open('input.in','r')
 
-h = [[0,0] for _ in range(9)]
-t = [0,0]
+h = [[0,0] for _ in range(10)]
 
 tail_positions = set()
 
@@ -32,19 +31,9 @@ try:
             h[0][0] += mapping[action][0]
             h[0][1] += mapping[action][1]
             
-            for i in range(1,9):
+            for i in range(1,10):
                 move_knots(i)
-            dx, dy = h[8][0]-t[0], h[8][1]-t[1]
-            if abs(dx) == 0 and abs(dy) == 0:
-                continue
-            if abs(dx)>1 and abs(dy)>=1 or abs(dx)>=1 and abs(dy)>1:
-                t[0] += 1 if dx > 0 else -1
-                t[1] += 1 if dy > 0 else -1
-            elif abs(dx)>1:
-                t[0] += 1 if dx > 0 else -1
-            elif abs(dy)>1:
-                t[1] += 1 if dy > 0 else -1
-            tail_positions.add(tuple(t))
+            tail_positions.add(tuple(h[9]))
 except EOFError:
     print(tail_positions)
     print(len(tail_positions))

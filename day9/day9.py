@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('sample.in','r')
+sys.stdin = open('input.in','r')
 
 h = [0,0]
 t = [0,0]
